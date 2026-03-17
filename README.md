@@ -23,7 +23,7 @@ Tech Stack
 
 -   **Backend:** NestJS (Node.js)
 
--   **AI Engine:** OpenAI GPT-4o-mini
+-   **AI Engine:** DeepSeek (deepseek-chat)
 
 -   **Cloud:** Microsoft Azure (App Service, Key Vault)
 
@@ -58,7 +58,7 @@ Code snippet
 
 ```
 PORT=8080
-OPENAI_API_KEY=your_key_here
+DEEPSEEK_API_KEY=your_key_here
 NODE_ENV=production
 
 ```
