@@ -1,4 +1,4 @@
-import { Controller, Post, Body, HttpException, HttpStatus } from '@nestjs/common';
+import { Controller, Post, Body, HttpException, HttpStatus, Get } from '@nestjs/common';
 import { AppService } from './app.service';
 
 @Controller()
@@ -11,5 +11,10 @@ export class AppController {
       throw new HttpException('URL is required', HttpStatus.BAD_REQUEST);
     }
     return this.appService.checkUrl(url);
+  }
+
+  @Get('health')
+  async healthCheck(): Promise<string> {
+    return this.appService.HealthCheck();
   }
 }

@@ -99,4 +99,8 @@ export class AppService {
 
     return completion.choices[0]?.message?.content || 'No insights generated.';
   }
+
+  async HealthCheck(): Promise<string> {
+    return new Date().toISOString();
+  }
 }
