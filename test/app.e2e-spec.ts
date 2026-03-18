@@ -16,10 +16,13 @@ describe('AppController (e2e)', () => {
     await app.init();
   });
 
-  it('/ (GET)', () => {
+  it('/check (POST) without URL', () => {
     return request(app.getHttpServer())
-      .get('/')
-      .expect(200)
-      .expect('Hello World!');
+      .post('/check')
+      .send({})
+      .expect(400)
+      .expect((res) => {
+        expect(res.body.message).toBe('URL is required');
+      });
   });
 });

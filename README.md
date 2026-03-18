@@ -29,6 +29,9 @@ Tech Stack
 
 -   **CI/CD:** GitHub Actions
 
+-   **Testing:** Jest
+
+-  **IAC:** Terraform
 * * * * *
 
  Architecture

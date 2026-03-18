@@ -58,7 +58,7 @@ export class AppService {
     const status = response?.status || 500;
     const headers = response?.headers || {};
 
-    let aiInsight = null;
+    let aiInsight: string | null = null;
     const needsAnalysis = timeMs > 500 || status >= 400;
 
     if (needsAnalysis && this.openai) {
