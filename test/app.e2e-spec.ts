@@ -25,4 +25,13 @@ describe('AppController (e2e)', () => {
         expect(res.body.message).toBe('URL is required');
       });
   });
+
+  it("/health(GET)", ()=>{
+    return request(app.getHttpServer())
+    .get("/health")
+    .expect(200)
+    .expect((res)=>{
+      expect(res.body).toBeDefined();
+    } )
+  })
 });
