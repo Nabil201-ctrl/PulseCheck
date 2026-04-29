@@ -13,7 +13,7 @@ export class AppService {
     private readonly httpService: HttpService,
     private readonly configService: ConfigService,
   ) {
-    const apiKey = this.configService.get<string>('DEEPSEEK_API_KEY') || this.configService.get<string>('OPENAI_API_KEY');
+    const apiKey = this.configService.get<string>('DEEPSEEK_API_KEY');
     if (apiKey) {
       this.openai = new OpenAI({
         apiKey,
